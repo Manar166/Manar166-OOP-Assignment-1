@@ -1,0 +1,16 @@
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\BuilderPattern.GeneratedMSBuildEditorConfig.editorconfig
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\BuilderPattern.AssemblyInfoInputs.cache
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\BuilderPattern.AssemblyInfo.cs
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\BuilderPattern.csproj.CoreCompileInputs.cache
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\BuilderPattern.sourcelink.json
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\bin\Debug\net10.0\BuilderPattern.exe
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\bin\Debug\net10.0\BuilderPattern.deps.json
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\bin\Debug\net10.0\BuilderPattern.runtimeconfig.json
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\bin\Debug\net10.0\BuilderPattern.dll
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\bin\Debug\net10.0\BuilderPattern.pdb
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\BuilderPattern.dll
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\refint\BuilderPattern.dll
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\BuilderPattern.pdb
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\BuilderPattern.genruntimeconfig.cache
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\ref\BuilderPattern.dll
+D:\Simulation\OOP\Assignment 1\Manar166-OOP-Assignment-1\Part3_BuilderPattern\BuilderPattern\BuilderPattern\obj\Debug\net10.0\BuilderP.558C30D3.Up2Date
