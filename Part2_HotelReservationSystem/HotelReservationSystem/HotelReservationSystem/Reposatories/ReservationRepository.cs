@@ -1,4 +1,5 @@
 ﻿using HotelReservationSystem.Models;
+using HotelReservationSystem.NewFolder;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,20 +8,54 @@ namespace HotelReservationSystem.Reposatories
 {
     public class ReservationRepository
     {
-        List<Reservation> reservations = new List<Reservation>();
-        public void AddReservation(int id, DateTime checkInTime, DateTime checkOutTime, Room room, Guest guest)
+        RoomRepository _roomRepository = Program.roomRepository;
+        GuestRepository _guestRepository = Program.guestRepository;
+
+        List<Reservation> reservations = Program.Reservations;
+
+
+
+
+        public void AddReservation(int id, DateTime checkInTime, DateTime checkOutTime, int roomNumber, int guestId)
         {
-            try
+            if(reservations.Exists(n=>n.Id== id))
             {
-                Reservation reservation = new Reservation(id, checkInTime, checkOutTime, room, guest);
-
-                reservations.Add(reservation);
+                throw new Exception($"Reservation with ID {id} already exists.");
             }
-            catch (Exception ex)
+            Room? room = _roomRepository.FindRoomByNumber(roomNumber);
+            if(room == null)
             {
-                Console.WriteLine($"Error adding reservation: {ex.Message}");
+                throw new Exception($"Room with number {roomNumber} not found.");
+               
+              
+            }
+            
+            Guest? guest = _guestRepository.GetGuestById(guestId);
+            if (guest is null)
+            {
+
+                throw new Exception($"Guest with ID {guestId} not found.");
+              
 
             }
+
+            bool isDoubleBooked = reservations.Any(n=>n.RoomId==roomNumber&&
+                                                     n.Status!= ReservationStatus.Cancelled && 
+                                                     n.Status!= ReservationStatus.CheckedOut&&
+                                                     n.CheckOutTime > checkInTime&&
+                                                     n.CheckInTime < checkOutTime);
+
+            if (isDoubleBooked)
+            {
+                throw new InvalidOperationException($"Room {roomNumber} is already booked for the selected date range.");
+            }
+            Reservation reservation = new Reservation(id, checkInTime, checkOutTime, room, guest);
+          
+
+            reservations.Add(reservation);
+          
+          
+
         }   
 
 
@@ -33,9 +68,13 @@ namespace HotelReservationSystem.Reposatories
         {
             return reservations.Find(r => r.Id == id);
         }
-        public Reservation? GetReservationByGuestId(int guestId)
+        public List<Reservation> GetReservationByGuestId(int guestId)
         {
-            return reservations.Find(r => r.Guest.Id == guestId);
+
+            return reservations.FindAll(r => r.Guest.Id == guestId);
         }
+
+
+
     }
 }

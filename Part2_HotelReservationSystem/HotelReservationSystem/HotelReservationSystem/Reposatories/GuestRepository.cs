@@ -6,7 +6,7 @@ namespace HotelReservationSystem.Reposatories
 {
     public class GuestRepository
     {
-        List<Guest>  Guests = new List<Guest>();
+        List<Guest> Guests = Program.Guests;
 
         public void AddGuest(int id, string fullName, string phoneNumber)
         {
@@ -33,5 +33,30 @@ namespace HotelReservationSystem.Reposatories
           
             return Guests.Find(n => n.Id == id);
         }
+
+        public List<Guest> GetAllGuests()
+        {
+            return Guests;
+        }
+
+        //public void GetGuestReservations(int guestId)
+        //{
+        //    Guest? guest = GetGuestById(guestId);
+        //    if (guest is null)
+        //    {
+        //        throw new Exception($"Guest with ID {guestId} not found.");
+        //    }
+        //    var reservations = guest.Reservations;
+        //    if (reservations.Count == 0)
+        //    {
+        //        Console.WriteLine($"No reservations found for guest {guest.FullName}.");
+        //        return;
+        //    }
+        //    Console.WriteLine($"Reservations for guest {guest.FullName}:");
+        //    foreach (var reservation in reservations)
+        //    {
+        //        Console.WriteLine($"Reservation ID: {reservation.Id}, Room Number: {reservation.RoomId}, Check-In: {reservation.CheckInTime}, Check-Out: {reservation.CheckOutTime}, Status: {reservation.Status}");
+        //    }
+        //}
     }
 }

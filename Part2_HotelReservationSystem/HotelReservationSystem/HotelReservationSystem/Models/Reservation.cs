@@ -10,11 +10,16 @@ namespace HotelReservationSystem.Models
         public int Id { get; }
         public DateTime CheckInTime { get; }
         public DateTime CheckOutTime { get; }
+        public int RoomId { get; }
 
         public Room Room { get; set; }
+        public int GuestId { get; }
+
         public Guest Guest { get; set; }
 
         public ReservationStatus Status { get; private set; }
+
+        public decimal TotalCost { get { return totalCost(); } }
 
 
 
@@ -38,7 +43,11 @@ namespace HotelReservationSystem.Models
                 this.CheckInTime = checkInTime;
                 this.CheckOutTime = checkOutTime;
                 this.Room = room;
-               
+                this.GuestId = guest.Id;
+                this.RoomId = room.Number;
+                this.Guest = guest;
+                this.Room = room;
+
                 this.Status = ReservationStatus.Pending;   
             }
 
@@ -89,6 +98,15 @@ namespace HotelReservationSystem.Models
             Status = ReservationStatus.Cancelled;
         }
 
+        public decimal totalCost()
+        {
+            TimeSpan stayDays = CheckOutTime - CheckInTime;
+            return Room.NightlyRate * (decimal)stayDays.TotalDays;
+        }
+        
+        
+      
+        
 
 
 
